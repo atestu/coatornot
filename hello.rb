@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'hpricot'
-require 'open-uri'
+require 'rest-open-uri'
 
 mime_type '.otf',  "application/x-font-otf"
 
