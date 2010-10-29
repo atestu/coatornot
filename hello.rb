@@ -11,13 +11,13 @@ get '/:city' do
   @message1 = "It's " + @temperature + "°C/" + @farenheit + "°F outside, so… "
   @message2 = ""
   if @temperature > "15" then
-    @yesorno = "No coat"
+    @yesorno = "Coat"
   else
     if @temperature > "10"
       @yesorno = "Meh"
       @message2 = "If you put one on, you'll be too hot and if you don't you'll be cold.<br /> Life's a bitch sometimes."
     else
-      @yesorno = "Coat"
+      @yesorno = "No coat"
     end
   end
   @city = params[:city]
