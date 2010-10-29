@@ -21,3 +21,16 @@ input[type=submit] {
 h2 {
 	color: silver;
 }
+
+#footer {
+	color: silver;
+	margin-top: 100px;
+}
+
+#footer a {
+	color: silver;
+}
+
+#footer a:hover {
+	color: gray;
+}
