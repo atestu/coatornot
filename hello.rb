@@ -4,7 +4,7 @@ require 'hpricot'
 require 'rest-open-uri'
 
 get '/:city' do
-  doc = open("http://www.google.com/ig/api?weather=#{params[:city].gsub(" ", "%20")}") { |f| Hpricot(f) }
+  doc = open("http://www.google.com/ig/api?weather=#{params[:city].gsub(/[ …]/, "%20")}") { |f| Hpricot(f) }
   unless (doc/"problem_cause") then
     @temperature = doc.at("temp_c")['data'].to_i
     @farenheit = doc.at("temp_f")['data'].to_i
