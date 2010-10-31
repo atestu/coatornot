@@ -14,7 +14,7 @@ get '/:city' do
     if @temperature > 15 then
       @yesorno = "No Coat"
     else
-      if @temperature > 10
+      if @temperature > 13
         @yesorno = "Meh"
         @message2 = "If you put one on, you'll be too hot and if you don't you'll be cold.<br /> Life's a bitch sometimes."
       else
